@@ -1,0 +1,4 @@
+data/articles.csv
+data/product_type.csv/*
+.DS_Store
+ejercicio_2.ipynb
