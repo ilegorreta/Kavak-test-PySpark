@@ -58,6 +58,10 @@ It uses [Visual Studio Code](https://code.visualstudio.com/) and the [devcontain
 It is noteworthy pointing out the directory structure of the repository:
 
 ```
+├── .devcontainer
+│   ├── Dockerfile
+│   ├── devcontainer.json
+│   └── docker-compose.yaml
 ├── README.md
 ├── data
 │   ├── articles.csv
