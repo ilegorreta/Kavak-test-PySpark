@@ -1,5 +1,23 @@
-# kavak-test - Exercise 1 
-## Local PySpark dev environment - Based on sample configuration from: jplane/pyspark-devcontainer public GitHub repository
+# Kavak-test - Exercise 2 
+### Local PySpark dev environment - Based on sample configuration from: jplane/pyspark-devcontainer public GitHub repository
+
+This repository contains the second exercise for the Data Engineering Test.
+
+Here are the exercise instructions:
+
+### Ejercicio 2 (Desarrollar en Spark) [tiempo estimado: 1 hr]
+El archivo ```articles.csv``` contiene una tabla con información de artículos que existen en una tienda de
+ropa. Deberás:
+1. Generar un diccionario a partir de la columna product_type_name
+(product_type_no,product_type_name)
+2. Escribir el diccionario como CSV
+3. Leer el CSV generado y hacer inner join con articles.csv
+El dataframe, después del inner join, debe tener el mismo número de registros que el archivo original.
+NOTAS:
+- No se debe mezclar Pandas con Spark
+- No se debe usar koalas para este ejercicio
+
+## Initial Considerations
 
 This repo provides everything needed for a self-contained, local PySpark 1-node "cluster" running on your laptop, including a Jupyter notebook environment.
 
@@ -7,7 +25,7 @@ It uses [Visual Studio Code](https://code.visualstudio.com/) and the [devcontain
 
 ## Requirements
 
-- Install [Docker Desktop](https://www.docker.com/products/docker-desktop/) (you don't have to be a Docker super-expert :-))
+- Install [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 
 - Install [Visual Studio Code](https://code.visualstudio.com/download)
 
@@ -17,22 +35,40 @@ It uses [Visual Studio Code](https://code.visualstudio.com/) and the [devcontain
 
 1. Install required tools 
 
-1. Git clone this repo to your laptop
+2. Git clone this repo to your laptop
 
-1. Open the local repo folder in VS Code
+3. Open the local repo folder in VS Code
 
-1. Open the [VS Code command palette](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette) and select/type 'Reopen in Container'
+4. Open the [VS Code command palette](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette) and select/type 'Reopen in Container'
 
-1. Wait while the devcontainer is built and initialized, this may take several minutes
+5. Wait while the devcontainer is built and initialized, this may take several minutes
 
-1. Open [ejercicio_2.ipynb](./src/ejercicio_2.ipynb) in VS Code
+6. Open ```src/ejercicio_2.ipynb``` in VS Code
 
-1. If you get an HTTP warning, click 'Yes'
+7. If you get an HTTP warning, click 'Yes'
 
+8. Wait a few moments for the Jupyter kernel to initialize... if after about 30 seconds or so the button on the upper-right still says 'Select Kernel', click that and select the option with 'ipykernel'
 
-1. Wait a few moments for the Jupyter kernel to initialize... if after about 30 seconds or so the button on the upper-right still says 'Select Kernel', click that and select the option with 'ipykernel'
+9. Run the first cell... it will take a few seconds to initialize the kernel and complete. 
 
+10. Run the remaining cells in the notebook!
 
-1. Run the first cell... it will take a few seconds to initialize the kernel and complete. You should see a message to browse to the Spark UI... click that for details of how your Spark session executes the work defined in your notebook on your 1-node Spark "cluster"
+---
+## Directory Tree Structure
+It is noteworthy pointing out the directory structure of the repository:
 
-1. Run the remaining cells in the notebook!
+```
+├── README.md
+├── data
+│   ├── articles.csv
+│   └── product_type.csv
+│       ├── _SUCCESS
+│       └── part-00000-1191b6cc-dd3e-498f-b799-2bbadec13086-c000.csv
+└── src
+    └── ejercicio_2.ipynb
+```
+
+## Developed by: Ivan Legorreta
+**Phone number**: +52 (55)1320-7574
+
+**Email**: ilegorreta@outlook.com
